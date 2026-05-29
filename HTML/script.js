@@ -227,6 +227,7 @@
 
   const PREKNOWN_FILES = {
     "Citadine Économique": [
+      "Ford Focus.jfif",
       "Hyundai Elantra.jfif",
       "Hyundai i10.jfif",
       "Kia Cerato.jfif",
@@ -238,6 +239,7 @@
     ],
     "Berline Confort": [
       "Chevrolet Equinox.webp",
+      "Ford Fusion.jfif",
       "Mazda 6.webp",
       "Mazda CX-5.webp",
       "Mercedes-Benz S 550.webp",
