@@ -10,7 +10,8 @@
 */
 
 (function () {
-  const WHATSAPP_NUMBERS = ["339418184", "764690028"];
+  // WhatsApp: numéro WhatsApp uniquement
+  const WHATSAPP_NUMBER = "764690028";
 
   // Mapping catégorie -> dossier (chemins relatifs au HTML)
   const CATEGORIES = [
@@ -142,8 +143,7 @@
       `Durée: ${days} jour(s)`
     );
 
-    const number = WHATSAPP_NUMBERS[0];
-    const url = `https://wa.me/${number}?text=${text}`;
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`;
     window.open(url, '_blank', 'noopener');
   }
 
@@ -187,20 +187,20 @@
   function initWhatsApp() {
     // WhatsApp floating
     const floatBtn = document.getElementById('whatsappBtn');
-    const url = `https://wa.me/${WHATSAPP_NUMBERS[0]}`;
+    const url = `https://wa.me/${WHATSAPP_NUMBER}`;
     if (floatBtn) floatBtn.href = url;
 
     // Hero buttons
     const hero = document.getElementById('whatsappHero');
     if (hero) {
-      hero.href = `https://wa.me/${WHATSAPP_NUMBERS[0]}`;
+      hero.href = `https://wa.me/${WHATSAPP_NUMBER}`;
     }
 
     // Contact buttons
     const btn1 = document.getElementById('whatsappBtn1');
     const btn2 = document.getElementById('whatsappBtn2');
-    if (btn1) btn1.href = `https://wa.me/${WHATSAPP_NUMBERS[0]}`;
-    if (btn2) btn2.href = `https://wa.me/${WHATSAPP_NUMBERS[1]}`;
+    if (btn1) btn1.href = `https://wa.me/${WHATSAPP_NUMBER}`;
+    if (btn2) btn2.href = `https://wa.me/${WHATSAPP_NUMBER}`;
   }
 
   // Cats UI (désactivé sur la version 4 pages)
@@ -480,7 +480,7 @@
 
         if (!name || !phone || !vehicleName) return;
         // On ouvre WhatsApp avec véhicule complet
-        const number = WHATSAPP_NUMBERS[0];
+        const number = WHATSAPP_NUMBER;
         const date = document.getElementById('cDate').value || getTodayISO();
         const days = document.getElementById('cDays').value || '1';
 
